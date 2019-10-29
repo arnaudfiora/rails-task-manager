@@ -1,0 +1,29 @@
+<div class="banner bg-puce">
+  <h1>Here are your tasks</h1>
+</div>
+
+<div class="wrapper bg-light-puce">
+  <div class="container">
+    <div id="tasks-list">
+
+      <% @tasks.each do |task| %>
+        <div class="task-card active bg-puce">
+
+          <% if task.completed %>
+            <span class="link">[V] </span>
+          <% else %>
+            <span class="link">[ ] </span>
+          <% end %>
+
+          <%= link_to task.title, task_path(task), class: "link" %>
+
+        </div>
+      <% end %>
+
+      <div class="task-card active">
+        <%= link_to '- Add new task -', tasks_new_path, class: "link" %>
+      </div>
+
+    </div>
+  </div>
+</div>

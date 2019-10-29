@@ -1,0 +1,34 @@
+<div class="banner bg-blue">
+  <h1><%= @task.title %></h1>
+</div>
+
+<div class="wrapper bg-light-blue">
+  <div class="container">
+
+    <div class="task-card bg-blue">
+      <p><%= @task.details %></p>
+    </div>
+
+    <div class="task-card bg-blue details">
+      <% if @task.completed %>
+        <p>Task completed!</p>
+      <% else %>
+        <p>Task <strong>not</strong> completed!</p>
+      <% end %>
+    </div>
+
+    <div class="task-card active bg-update">
+      <%= link_to '- Update this task -', task_edit_path(@task), class: 'link' %>
+    </div>
+
+    <div class="task-card active bg-delete">
+      <%= link_to '- Delete this task -', task_path(@task), method: :delete, data: { confirm: "Are you sure?" }, class: 'link' %>
+    </div>
+
+
+    <div class="task-card active">
+      <%= link_to '- Back to all tasks -', tasks_path, class: 'link' %>
+    </div>
+
+  </div>
+</div>

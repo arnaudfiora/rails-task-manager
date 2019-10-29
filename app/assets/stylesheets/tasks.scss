@@ -1,0 +1,98 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+
+.banner {
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  background-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: white;
+    font-family: 'Staatliches', cursive;
+    font-size: 64px;
+    text-align: center;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 600px;
+  height: 100vh;
+  margin: 0px auto;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+
+  p {
+    margin: 0;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.task-card {
+  padding: 20px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  background-color: black;
+  font-family: 'Staatliches', cursive;
+  font-size: 32px;
+  text-align: center;
+
+  p {
+    color: white;
+  }
+}
+
+.task-card.details {
+    margin-bottom: 50px;
+  }
+
+.task-card.active:hover {
+  border: 3px solid black;
+  background-color: white;
+  .link {
+    color: rgba(50, 144, 143, 1);
+    text-decoration: none;
+  }
+
+}
+
+.bg-blue {
+  background-color: rgba(50, 144, 143, 1);
+}
+
+.bg-light-blue {
+  background-color: rgba(50, 144, 143, 0.5);
+}
+
+.bg-puce {
+  background-color: rgba(85, 58, 65, 1);
+}
+
+.bg-light-puce {
+  background-color: rgba(85, 58, 65, 0.5);
+}
+
+.bg-update {
+  background-color: #254E70;
+}
+
+.bg-delete {
+  background-color: #C33C54;
+}
